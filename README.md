@@ -52,3 +52,4 @@ YunGouOS微信支付官方合作伙伴,YunGouOS-PAY是徐州市云宝网络科�
 第一步：下载该插件，放到网站根目录
 
 第二步：登录你的WHMCS后台->系统设置->付款设置->支付接口->点击tab页（All Payment GateWays）找到YunGouOS微信个人支付接口点击设置商户号与密钥。
+涉及货币转换的，请添加CNY货币，并选择转换为CNY。
