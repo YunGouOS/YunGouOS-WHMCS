@@ -1,4 +1,6 @@
 <?php
+header('content-type:text/html;charset=utf-8');
+
 /**
  *  Http请求工具类
  *  author YunGouOS

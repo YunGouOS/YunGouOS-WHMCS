@@ -1,20 +1,21 @@
 <?php
 use WHMCS\Database\Capsule;
-require_once __DIR__ . '/YunGouOS-PHP-SDK/wxpay/WxPay.php';
+require_once __DIR__ . '/YunGouOS-PHP-SDK/merge/Merge.php';
+
 function yungouos_config()
 {
     $configarray = array(
         "FriendlyName" => array(
             "Type" => "System",
-            "Value" => "YunGouOS微信个人支付接口"
+            "Value" => "YunGouOS一码付接口"
         ),
         "mchid" => array(
-            "FriendlyName" => "微信支付商户号",
+            "FriendlyName" => "聚合支付商户号",
             "Type" => "text",
             "Size" => "32",
         ),
         "key" => array(
-            "FriendlyName" => "微信支付密钥",
+            "FriendlyName" => "聚合支付密钥",
             "Type" => "password",
             "Size" => "32",
         ),
@@ -34,7 +35,7 @@ function yungouos_form($params)
     $systemurl = $params['systemurl'];
     if (stristr($n1, 'viewinvoice')) {
     } else {
-        return '<img style="width: 150px" src="' . $systemurl . '/modules/gateways/yungouos/wechat.png" alt="微信支付"  />';
+        return '<img style="width: 150px" src="' . $systemurl . '/modules/gateways/yungouos/wechat.png" alt="聚合支付"  />';
     }
 
     $invoiceid = $params['invoiceid'];
@@ -51,7 +52,7 @@ function yungouos_form($params)
         return "API调用失败" . $result;
     }
     $code = '<div class="yungouos"><center><div id="yungouosimg" style="border: 1px solid #AAA;border-radius: 4px;overflow: hidden;margin-bottom: 5px;width: 202px;"><img class="img-responsive pad" src="' . $result . '" style="width: 250px; height: 200px;"></div>';
-    $code_ajax = '<a href="#" target="_blank" id="yungouosDiv" class="btn btn-success" style="width: auto; ">使用手机微信扫描上面二维码进行支付<br>
+    $code_ajax = '<a href="#" target="_blank" id="yungouosDiv" class="btn btn-success" style="width: auto; ">使用手机微信或支付宝扫描上面二维码进行支付<br>
 	</a><br><span class="hidden-lg hidden-md">' . $result . '</span></center></div>';
     $code_ajax = $code_ajax . '
 	<script>	
@@ -87,7 +88,7 @@ function yungouos_form($params)
     if (stristr($n1, 'viewinvoice')) {
         return $code;
     } else {
-        return '<img style="width: 150px" src="' . $systemurl . '/modules/gateways/yungouos/wechat.png" alt="微信支付"  />';
+        return '<img style="width: 150px" src="' . $systemurl . '/modules/gateways/yungouos/wechat.png" alt="聚合支付"  />';
     }
 
 }
