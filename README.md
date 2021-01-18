@@ -1,3 +1,6 @@
+# 关于插件二次开发
+本插件是在官方原版插件基础上，从微信付款方式更改为了融合支付，也就是一个码，可以同时扫微信和支付宝。
+
 # YunGouOS-PAY-SDK
 
 ![https://yungouos.oss-cn-shanghai.aliyuncs.com/YunGouOS/logo/merchant/logo.png](https://yungouos.oss-cn-shanghai.aliyuncs.com/YunGouOS/logo/merchant/logo.png)
@@ -52,3 +55,4 @@ YunGouOS微信支付官方合作伙伴,YunGouOS-PAY是徐州市云宝网络科�
 第一步：下载该插件，放到网站根目录
 
 第二步：登录你的WHMCS后台->系统设置->付款设置->支付接口->点击tab页（All Payment GateWays）找到YunGouOS微信个人支付接口点击设置商户号与密钥。
+涉及货币转换的，请添加CNY货币，并选择转换为CNY。
