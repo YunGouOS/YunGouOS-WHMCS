@@ -1,3 +1,6 @@
+# 关于插件二次开发
+本插件是在官方原版插件基础上，从微信付款方式更改为了融合支付，也就是一个码，可以同时扫微信和支付宝。
+
 # YunGouOS-PAY-SDK
 
 ![https://yungouos.oss-cn-shanghai.aliyuncs.com/YunGouOS/logo/merchant/logo.png](https://yungouos.oss-cn-shanghai.aliyuncs.com/YunGouOS/logo/merchant/logo.png)
